@@ -1,0 +1,10 @@
+{
+	"ImportPath": "gitlab.com/DOHW/dummy-go-webapp",
+	"GoVersion": "go1.4.2",
+	"Deps": [
+		{
+			"ImportPath": "gitlab.com/DOHW/dummy-go-lib",
+			"Rev": "17ebcca3e3c13ed51122dc90aacd2864cb180350"
+		}
+	]
+}
