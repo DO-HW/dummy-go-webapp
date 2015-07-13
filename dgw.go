@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-import "gitlab.com/DOHW/dummy-go-lib"
+import "github.com/DO-HW/dummy-go-lib"
 
 func hello(w http.ResponseWriter, r *http.Request) {
 	io.WriteString(w, "Hello "+ sayhello.HelloWorld() +"!")

@@ -1,10 +1,15 @@
 {
-	"ImportPath": "gitlab.com/DOHW/dummy-go-webapp",
+	"ImportPath": "github.com/DO-HW/dummy-go-webapp",
 	"GoVersion": "go1.4.2",
 	"Deps": [
 		{
-			"ImportPath": "gitlab.com/DOHW/dummy-go-lib",
-			"Rev": "17ebcca3e3c13ed51122dc90aacd2864cb180350"
+			"ImportPath": "github.com/DO-HW/dummy-go-lib",
+			"Rev": "46fbd9a75d136930a8a37bbfd75c386c77b6024f"
+		},
+		{
+			"ImportPath": "github.com/stretchr/testify/assert",
+			"Comment": "v1.0-17-g089c718",
+			"Rev": "089c7181b8c728499929ff09b62d3fdd8df8adff"
 		}
 	]
 }
