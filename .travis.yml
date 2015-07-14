@@ -16,4 +16,4 @@ install:
   - godep restore
 
 script:
-  - go test
+  - $HOME/gopath/bin/goveralls -service=travis-ci
