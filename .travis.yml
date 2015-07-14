@@ -1,27 +1,21 @@
 language: go
-
 go:
-  - 1.4.2
-
-env: 
-  - PATH=/home/travis/gopath/bin:$PATH
-
+- 1.4.2
+env:
+- PATH=/home/travis/gopath/bin:$PATH
 before_install:
-  - go get github.com/axw/gocov/gocov
-  - go get github.com/mattn/goveralls
-  - if ! go get code.google.com/p/go.tools/cmd/cover; then go get golang.org/x/tools/cmd/cover; fi
-
+- go get github.com/axw/gocov/gocov
+- go get github.com/mattn/goveralls
+- if ! go get code.google.com/p/go.tools/cmd/cover; then go get golang.org/x/tools/cmd/cover; fi
 install:
-  - go get github.com/tools/godep
-  - godep restore
-
+- go get github.com/tools/godep
+- godep restore
 script:
-  - $HOME/gopath/bin/goveralls -service=travis-ci
-
+- "$HOME/gopath/bin/goveralls -service=travis-ci"
 deploy:
   provider: heroku
   api_key:
-    secure: lO/J+s395W5oHsN867YeVruha0aCzjFn6DPGmTsbTgaZ7Y2SinicALbyqEV3y6oi5FgvoqjZEZim1e1BzOKJttRj6Skkc4lypvjmVGPYhFiHdGuO5ES0Vp2g93V8CZS8miW4qxvGZJtAYIc0fguFGSmpwWOitZcMQfeED+ucp8MeONC6QL7gVHzZx411xZaAEsxwRkASJwlHyhUwEzhMb21R2Ts6yVelCcgMRMhTnfAdicd5zQThC+khI1DDN3euFl2pSHl3VUQqzejAUO9fJeBTYxaMr/qyDk/ohXIR+20hb75A94hLdmboEX4llZ6+iCRp2t8Xly3KIbtX9XDg+PMztEfXSDeqLRAAoPCAo1AssjxcY8D8iyUm4htN8P8plAFQnJN0dWx0oMPUU1UzA1SSxmibeVb91zSw8nj1Qb7bcI3+ltdsC5Ykv2SX9TmMP6+LHgARH/Il9BNaNPXDt4d9l1cclU4PeV4gP0yIizcITURkfu7KVX2G1k159XGjP1kbWzplrfsKUKj2HSeZFq415UKBK8sxLcOOCOvOutw+aRg0xMiXrQefkwk0dm+io5RZqVMlM5LcSeMFrX/II8LIQCTWx8ZCmCKcLqj1N5DaIkJ1u3jJh2RQ8Mdj/+vtLMZRULFXqMgfAmKkLgxvZdzThC4qpsLwfgYj+c257h4=
-  app: belle-gerard-6872
+    secure: A968PdjO8eEi6WMBIvx2lxFcKc4hUy0tXEfWcMjKfQ3FEQ23vthnDaeR4p6vvWLXGisxpXCRipC7iTdqJRnZPpF4ADL0m8ayRDzfBwEgzIfugsvttIDsA9b/AvQ2b0ig62WiKFb74zIMIV4mLHSANoqwZE/5hDBC7MFohzxk4Q5bdQC/kHSh+bZt2AvCb9rveGTbehH4yX2K+bVA9ofLggdUtU/ynM4XWxTpVltmZmBSs9s+Ok8tNJcOIfby27haGRsYmy0oB3qLDk181y/MbAFl2orUC0k0H4S+2t6nRGhMcW7SZ/L4+cRQTke4O/Roh11sc7m6FCkiSnsVVQCLqKgPSXLu5WOkvzpbyig9TXNl68l7JSJ++ZecENC8dxl5ys6EeAKMfd+wUd9K+umPXZl8ub1Xp8sowKGXeiczJZ5mPavmgM1Fam7anc0s9Uvng608Nmuh1raJNsgjC6u3wAhEEYj+TFTBCk2YZR+Fr5EJ+HeZ2qJJs1ENRayF/lgBAqbqSoIknlKwt9haBl4B4aoFvCzPx68Tx9B6QkP4RUxW4UYGt/mXcDkD9XG8t8JCHMSIhg5M6rHA+U9znVkivLhXJFBNlg3H7PJXONtOXnAN0Okyacg3UiScCYt37H7VXH7CT3dJ+exFvTq7s0euQDae4rvkPMfM6hakh8FV4+4=
+  app: dummy-go-webapp
   on:
     repo: DO-HW/dummy-go-webapp
