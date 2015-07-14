@@ -1,22 +1,18 @@
 language: go
 go:
 - 1.4.2
-
 env:
 - PATH=/home/travis/gopath/bin:$PATH
-
 before_install:
 - go get github.com/axw/gocov/gocov
 - go get github.com/mattn/goveralls
-- if ! go get code.google.com/p/go.tools/cmd/cover; then go get golang.org/x/tools/cmd/cover; fi
-
+- if ! go get code.google.com/p/go.tools/cmd/cover; then go get golang.org/x/tools/cmd/cover;
+  fi
 install:
 - go get github.com/tools/godep
 - godep restore
-
 script:
 - "$HOME/gopath/bin/goveralls -service=travis-ci"
-
 deploy:
   provider: heroku
   api_key:
@@ -24,3 +20,6 @@ deploy:
   app: dummy-go-webapp
   on:
     repo: DO-HW/dummy-go-webapp
+notifications:
+  slack:
+    secure: hZnLQJ6KR7CXCrgaq7R6k9eziW/7wEOgjfaM5uvWSRph3fkQBmVIDuvFGUTKutiOK/0Q6eE9kbfkedTEUG8OL966PndVdWbC89COHjhDUJcm4w4ZPUhsgkmu/RIJFJqhRYZ0oR6wIvum8n9+mJJL9mmqUmZDdGz8jIswTIz7rCSp4RBYkjLbGNT0KS6ElJa9zTxAB4iJeSXp8y7EZ5EKdo/R8IH+vU+jAnzWIC/ePoolczwFut2xroqwkDUnYnWxATYmQ51zTLhSo8bTNPpG2RiJEhdWpOXhe92FC7yfeebzLYhySIZSeHPm0DRqy5mBryrEWRFftB+Z1tfMCO98ArpGp1Jw1OiqKKIA43dN7cfFMeFi/vKVWmqsfU8gipGqeBNadU+/wei0tyzjsAT12VZfHdBUbh0dprVAUekPNTNtxx66SnHOZiWu2BlQ3aEwVBhLfY1vsTXIw8AqrUXtgCDbmeY0QQf1tY4+Rb2Z9xcUPKoB3FXuzDWNEoNmc48RjcPgreP/CysUqyOvEOzTibrgfnomzlcN1oqltpQx4kwz5lVsvwfFV2t5WXcZiRtEaIVG3RxEqsFa7RkXq5Ge7FWzYDx4ng2UrlPh9JBxYGb0ayshlXKlVebaj4X71nAxs0rdcKbmePa8GEiZYmK8rkT6o+n4wHAO9ImHOfNtZr8=
