@@ -4,7 +4,7 @@
 	"Deps": [
 		{
 			"ImportPath": "github.com/DO-HW/dummy-go-lib",
-			"Rev": "46fbd9a75d136930a8a37bbfd75c386c77b6024f"
+			"Rev": "14ad5be07a462f616f4ad8b25c70856091960c9f"
 		},
 		{
 			"ImportPath": "github.com/stretchr/testify/assert",
