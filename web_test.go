@@ -18,6 +18,6 @@ func TestHello(t *testing.T){
         t.Errorf("Home page didn't return %v", http.StatusOK)
     }
 
-    assert.Equal(t, w.Body.String(), "Hello World!", "body should be Hello World!");
+    assert.Equal(t, w.Body.String(), "Greeting World!", "body should be Hello World!");
 
 }
