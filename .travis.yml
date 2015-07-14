@@ -3,6 +3,9 @@ language: go
 go:
   - 1.4.2
 
+env: 
+  - PATH=/home/travis/gopath/bin:$PATH
+
 before_install:
   - go get github.com/axw/gocov/gocov
   - go get github.com/mattn/goveralls
@@ -20,3 +23,5 @@ deploy:
   api_key:
     secure: lO/J+s395W5oHsN867YeVruha0aCzjFn6DPGmTsbTgaZ7Y2SinicALbyqEV3y6oi5FgvoqjZEZim1e1BzOKJttRj6Skkc4lypvjmVGPYhFiHdGuO5ES0Vp2g93V8CZS8miW4qxvGZJtAYIc0fguFGSmpwWOitZcMQfeED+ucp8MeONC6QL7gVHzZx411xZaAEsxwRkASJwlHyhUwEzhMb21R2Ts6yVelCcgMRMhTnfAdicd5zQThC+khI1DDN3euFl2pSHl3VUQqzejAUO9fJeBTYxaMr/qyDk/ohXIR+20hb75A94hLdmboEX4llZ6+iCRp2t8Xly3KIbtX9XDg+PMztEfXSDeqLRAAoPCAo1AssjxcY8D8iyUm4htN8P8plAFQnJN0dWx0oMPUU1UzA1SSxmibeVb91zSw8nj1Qb7bcI3+ltdsC5Ykv2SX9TmMP6+LHgARH/Il9BNaNPXDt4d9l1cclU4PeV4gP0yIizcITURkfu7KVX2G1k159XGjP1kbWzplrfsKUKj2HSeZFq415UKBK8sxLcOOCOvOutw+aRg0xMiXrQefkwk0dm+io5RZqVMlM5LcSeMFrX/II8LIQCTWx8ZCmCKcLqj1N5DaIkJ1u3jJh2RQ8Mdj/+vtLMZRULFXqMgfAmKkLgxvZdzThC4qpsLwfgYj+c257h4=
   app: belle-gerard-6872
+  on:
+    repo: DO-HW/dummy-go-webapp
